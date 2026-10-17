@@ -83,7 +83,11 @@
     .card{padding:22px 18px}
   }
   @media print{
-    body{background:#fff}
+    :root{ --bg:#fff; --card:#fff; --ink:#1d2433; --sub:#5b6474; --line:#d8d5cc;
+      --accent:#1f4e79; --accent-soft:#e8eef5; --num:#b8860b; }
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .wrap{padding:0 8px}
+    .print-url{display:block !important}
     .card{break-inside:avoid;border-color:#ccc}
   }
 </style>
@@ -265,7 +269,10 @@
     </article>
   </section>
 
-  <footer>© 2026 임승빈 · Accounting &amp; Tax Portfolio</footer>
+  <footer>
+    <span class="print-url" style="display:none;margin-bottom:6px">온라인 버전: <a href="https://seungbin-lim00.github.io">https://seungbin-lim00.github.io</a></span>
+    © 2026 임승빈 · Accounting &amp; Tax Portfolio
+  </footer>
 </div>
 </body>
 </html>
